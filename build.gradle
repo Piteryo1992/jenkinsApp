@@ -21,7 +21,6 @@ dependencies {
 heroku {
 	appName = "pit-jenkins-app-example"
 	includes = ["build/libs/Jenkins-demo-app-0.0.1-SNAPSHOT.jar"]
-	includeBuildDir = false
 	processTypes(
 			web: "java -jar build/libs/Jenkins-demo-app-0.0.1-SNAPSHOT.jar"
 	)
