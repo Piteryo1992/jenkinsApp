@@ -2,6 +2,7 @@ plugins {
 	id 'org.springframework.boot' version '2.4.1'
 	id 'io.spring.dependency-management' version '1.0.10.RELEASE'
 	id 'java'
+	id "com.heroku.sdk.heroku-gradle" version "2.0.0"
 }
 
 group = 'com.example'
@@ -15,6 +16,16 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	compile group: 'com.heroku.sdk', name: 'heroku-maven-plugin', version: '3.0.4'
+}
+
+heroku {
+	appName = "pit-jenkins-app-example"
+	includes = ["build/libs/my-app.jar"]
+	includeBuildDir = false
+	processTypes(
+			web: "java -jar build/libs/Jenkins-demo-app-0.0.1-SNAPSHOT.jar"
+	)
 }
 
 test {
