@@ -1,4 +1,4 @@
-package com.example.Jenkinsdemoapp;
+package com.example.jenkinsdemoapp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -13,7 +13,7 @@ public class JenkinsDemoAppApplication {
 		SpringApplication.run(JenkinsDemoAppApplication.class, args);
 	}
 
-	@GetMapping
+	@GetMapping()
 	public String get() {
 		return "No Witam!";
 	}

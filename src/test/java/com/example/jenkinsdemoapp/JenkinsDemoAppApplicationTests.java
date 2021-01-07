@@ -1,4 +1,4 @@
-package com.example.Jenkinsdemoapp;
+package com.example.jenkinsdemoapp;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
